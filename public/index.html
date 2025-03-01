@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AI Pin WiFi QR Code Generator</title>
+    <style>
+      body {
+        font-family: sans-serif;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: #f7f9fc;
+        color: #333;
+      }
+      h1 {
+        margin-bottom: 20px;
+        font-size: 2em;
+      }
+      label {
+        margin-bottom: 8px;
+      }
+      input {
+        width: 300px;
+      }
+      button {
+        margin: 16px 0;
+      }
+      .github {
+        width: 24px;
+        margin-left: 8px;
+      }
+      .form {
+        display: grid;
+        grid-template-columns: auto 1fr;
+        gap: 8px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>
+      AI Pin WiFi QR Code Generator
+      <a
+        href="https://github.com/agg23/ai-pin-wifi-qr-generator"
+        title="GitHub Repo"
+      >
+        <img
+          class="github"
+          src="https://cdnjs.cloudflare.com/ajax/libs/octicons/4.4.0/svg/mark-github.svg"
+          alt="GitHub"
+        />
+      </a>
+    </h1>
+    <div>
+      <p>Generate a WiFi crediential QR code to allow setting up an AI Pin.</p>
+      <p>
+        All information stays within your web browser and is not sent to an
+        external server.
+      </p>
+      <p>
+        DO NOT share this image with anyone; it contains your unencrypted WiFi
+        password.
+      </p>
+    </div>
+    <div class="form">
+      <label for="ssid-input">SSID:</label>
+      <input
+        type="text"
+        id="ssid-input"
+        placeholder="Enter your WiFi network's name"
+      />
+      <label for="security-select">Security:</label>
+      <select id="security-select">
+        <option>WPA</option>
+        <option>WEP</option>
+        <option>None</option>
+      </select>
+      <label for="password-input">Password:</label>
+      <input
+        type="password"
+        id="password-input"
+        placeholder="Enter your WiFi network's password"
+      />
+      <label for="hidden-input">Hidden SSID:</label>
+      <input type="checkbox" id="hidden-input" />
+    </div>
+    <div></div>
+    <button id="generate-button">Generate QR Code</button>
+    <div id="qr-code"></div>
+    <script src="dist/bundle.js"></script>
+  </body>
+</html>

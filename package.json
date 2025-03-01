@@ -1,0 +1,30 @@
+{
+  "name": "ai-pin-wifi-qr-generator",
+  "version": "0.1.0",
+  "description": "Generate WiFi QR codes for Humane AI Pin",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "build": "rollup -c",
+    "dev": "rollup -c -w"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/agg23/ai-pin-wifi-qr-generator.git"
+  },
+  "author": "agg23",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/agg23/ai-pin-wifi-qr-generator/issues"
+  },
+  "homepage": "https://github.com/agg23/ai-pin-wifi-qr-generator#readme",
+  "dependencies": {
+    "kjua": "^0.10.0"
+  },
+  "devDependencies": {
+    "@rollup/plugin-commonjs": "^28.0.2",
+    "@rollup/plugin-node-resolve": "^16.0.0",
+    "rollup": "^4.34.9",
+    "rollup-plugin-serve": "^3.0.0"
+  }
+}
