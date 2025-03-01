@@ -1,6 +1,7 @@
 import resolve from "@rollup/plugin-node-resolve";
 import commonjs from "@rollup/plugin-commonjs";
 import serve from "rollup-plugin-serve";
+import copy from "rollup-plugin-copy";
 
 const production = !process.env.ROLLUP_WATCH;
 
@@ -15,6 +16,9 @@ export default {
   plugins: [
     resolve(),
     commonjs(),
+    copy({
+      targets: [{ src: "public/index.html", dest: "dist" }],
+    }),
     !production &&
       serve({
         contentBase: ["public", "."],
